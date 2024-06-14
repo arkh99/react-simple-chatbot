@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import ChatBot from '../../lib/index';
+import ChatBot from 'react-simple-chatbot';
 
 const otherFontTheme = {
   background: '#f5f8fb',
@@ -22,12 +22,10 @@ const steps = [
   }
 ];
 
-const ThemedExample = () => (
+const Example = () => (
   <ThemeProvider theme={otherFontTheme}>
-    <React.StrictMode>
-      <ChatBot steps={steps} />
-    </React.StrictMode>
+    <ChatBot steps={steps} />
   </ThemeProvider>
 );
 
-export default ThemedExample;
+export default Example;
